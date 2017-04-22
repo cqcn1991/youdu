@@ -1,0 +1,63 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require leaflet
+ *= require font-awesome
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+header{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.books{
+  padding-left: 15px;
+  padding-right: 15px;
+
+  .book{
+    margin-bottom: 30px;
+  }
+}
+
+.book-title{
+  margin-top: 5px;
+}
+
+.rating{
+  font-size: 28px;
+}
+
+.review{
+  margin-top: 10px;
+
+}
+
+.borrow-info{
+  margin-top: 20px;
+  .img-round{
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
+  .avatar{
+    height: 64px;
+    width: 64px;
+    margin-right: 20px;
+  }
+}
+
+#mapid { height: 800px; }
+
