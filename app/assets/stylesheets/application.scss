@@ -18,24 +18,33 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
-header{
-  padding-left: 15px;
-  padding-right: 15px;
+.navbar{
+  h2{
+    margin-bottom: 15px;
+    margin-top: 15px;
+    .first{color: rgb(43,149,59);  }
+    .second{color: rgb(37,151,205)}
+    .third{color: rgb(246,198,142)}
+  }
+  margin-bottom: 0;
+  .navbar-nav > li > a {
+    padding-top: 23px !important;
+  }
 }
 
 .books{
-    top: 80px;
+    top: 65px;
     bottom: 0;
     left: 0;
     overflow-y: scroll;
     position: fixed;
     width: 60%;
     z-index: 0;
+    padding-top: 15px;
 }
 
 .map{
-    top: 80px;
+    top: 65px;
     z-index: 0;
     display: block;
     width: 40%;
@@ -49,7 +58,6 @@ header{
 .books{
   padding-left: 15px;
   padding-right: 15px;
-
   .book{
     margin-bottom: 30px;
   }
@@ -65,11 +73,10 @@ header{
 
 .review{
   margin-top: 10px;
-
 }
 
 .borrow-info{
-  margin-top: 20px;
+  margin-top: 10px;
   .img-round{
     border: 2px solid #fff;
     border-radius: 50%;
@@ -77,13 +84,16 @@ header{
   .avatar{
     height: 64px;
     width: 64px;
-    margin-right: 20px;
+    margin-right: 15px;
     &.requester{
       &:first-of-type{
         margin-left: 0;
       }
       margin-left: -45px;
     }
+  }
+  .borrow-button{
+    margin-top: 10px;
   }
 }
 

@@ -4,8 +4,14 @@
 
   <div class="container-fluid">
     <div class="navbar-header">
-      <h1>豆瓣友读</h1>
+      <h2>
+        <span class="first">豆瓣</span><span class="second">友</span><span class="third">读</span>
+      </h2>
     </div>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">About</a></li>
+    </ul>
   </div>
 </nav>
 
@@ -56,20 +62,19 @@
             </div>
 
             <div class="borrow-info">
-              <img alt="Hong是房东。" src="https://z2.muscache.com/im/pictures/5ccd7883-d4ab-4420-8e32-a5c6af9358f9.jpg?aki_policy=profile_x_medium" title="Hong的用户个人资料"
-                   class="img-round pull-left avatar"
-                   data-reactid="118" height="64" width="64">
-              <div class="btn-group pull-right" >
+              <img src="https://z2.muscache.com/im/pictures/a6e1f204-9e02-46cd-961a-0f6440abfbdd.jpg?aki_policy=profile_x_medium"
+                   class="img-round pull-left avatar" height="64" width="64">
+              <h4 class="pull-left">
+                Jackie 等4人有这本书
+                <br>
+                <small>25人借过</small>
+              </h4>
+              <div class="btn-group pull-right borrow-button" >
                 <button type="button" class="btn btn-primary btn-lg"
                         data-toggle="modal" data-target="#myModal">借</button>
                 <button type="button" class="btn btn-default btn-lg"
                         data-toggle="modal" data-target="#myModal">在线试读</button>
               </div>
-              <h4>
-                Hong 等4人也有这本书
-                <br>
-                <small>25人借过</small>
-              </h4>
             </div>
           </div>
         </div>
@@ -113,19 +118,19 @@
                 <% end %>
                 <div class="borrow-info">
                   <% if book[:borrow_info][:avaiable]  %>
-                    <div class="btn-group pull-right" >
+                    <% borrower = book[:borrow_info][:borrower]  %>
+                    <%= image_tag(borrower[:avatar], class: 'img-round pull-left avatar' ) %>
+                    <h4 class="pull-left">
+                      <%= borrower[:user_name] %> 有这本书
+                      <br>
+                      <small>附近<%= borrower[:distance] %>m, <%= borrower[:record_num] %>人借过</small>
+                    </h4>
+                    <div class="btn-group pull-right borrow-button" >
                       <button type="button" class="btn btn-primary btn-lg"
                               data-toggle="modal" data-target="#myModal">借</button>
                       <button type="button" class="btn btn-default btn-lg"
                               data-toggle="modal" data-target="#myModal">在线试读</button>
                     </div>
-                    <% borrower = book[:borrow_info][:borrower]  %>
-                    <%= image_tag(borrower[:avatar], class: 'img-round pull-left avatar' ) %>
-                    <h4>
-                      <%= borrower[:user_name] %> 有这本书
-                      <br>
-                      <small>附近<%= borrower[:distance] %>m, <%= borrower[:record_num] %>人借过</small>
-                    </h4>
                   <% else  %>
                       <img src="https://z2.muscache.com/im/pictures/6b67c96e-02be-4c2d-965d-11ccb8b74873.jpg?aki_policy=profile_x_medium"
                            class="img-round pull-left avatar requester"
@@ -136,15 +141,15 @@
                       <img src="https://z1.muscache.com/im/users/39563133/profile_pic/1437891275/original.jpg?aki_policy=profile_x_medium"
                            class="img-round pull-left avatar requester"
                            data-reactid="118" height="64" width="64">
-                      <div class="btn-group pull-right" >
-                        <button type="button" class="btn btn-success btn-lg">我有</button>
-                        <button type="button" class="btn btn-default btn-lg">+1</button>
-                      </div>
-                      <h4>
+                      <h4 class="pull-left">
                         猴子 等4人想读
                         <br>
                         <small>附近2km</small>
                       </h4>
+                      <div class="btn-group pull-right borrow-button" >
+                        <button type="button" class="btn btn-success btn-lg">我有</button>
+                        <button type="button" class="btn btn-default btn-lg">+1</button>
+                      </div>
 
 
                   <% end  %>
@@ -166,9 +171,6 @@
 
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
           maxZoom: 18,
-          attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-          '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-          'Imagery © <a href="http://mapbox.com">Mapbox</a>',
           id: 'mapbox.streets'
         }).addTo(mymap);
 
