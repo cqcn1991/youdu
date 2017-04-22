@@ -6,7 +6,7 @@ class MiscController < ApplicationController
           cover: 'https://img3.doubanio.com/lpic/s28571694.jpg',
           rating: 8.1,
           ratings_num: 2137,
-          category: '传记 / 科技 /商业',
+          category: '传记 / 科技 / 商业',
           reviews: [
             {user: 'Moon', likes: 10, content:
                 '读下来挺过瘾的，很有趣的一本传记，或许只有把生活搞得极端混乱的人才能有极致的成就。'

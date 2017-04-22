@@ -44,7 +44,9 @@
             <% end %>
             <div class="review">
               <span class="user">
-                <a href="">子珂</a>: 半本好书，前面挺有意思，讲他如何少年时的读书生涯，如何在几个专业间流转，如何解出21点，如何成为最早的quant并建立自己的hedge fund。可惜后面部分行文太过随意，没什么有深度的东西了
+                <a href="">子珂</a>: <strong>天才与那个待他征服的世界</strong> 半本好书，前面挺有意思，讲他如何少年时的读书生涯，如何在几个专业间流转，如何解出21点，如何成为最早的quant并建立自己的hedge fund。
+                可惜后面部分行文太过随意，没什么有深度的东西了
+                <a href="">...<small>阅读全文</small></a>
               </span>
               <span class="likes pull-right">
                 <small>
@@ -58,8 +60,10 @@
                    class="img-round pull-left avatar"
                    data-reactid="118" height="64" width="64">
               <div class="btn-group pull-right" >
-                <button type="button" class="btn btn-primary btn-lg">借</button>
-                <button type="button" class="btn btn-default btn-lg">在线试读</button>
+                <button type="button" class="btn btn-primary btn-lg"
+                        data-toggle="modal" data-target="#myModal">借</button>
+                <button type="button" class="btn btn-default btn-lg"
+                        data-toggle="modal" data-target="#myModal">在线试读</button>
               </div>
               <h4>
                 Hong 等4人也有这本书
@@ -110,8 +114,10 @@
                 <div class="borrow-info">
                   <% if book[:borrow_info][:avaiable]  %>
                     <div class="btn-group pull-right" >
-                      <button type="button" class="btn btn-primary btn-lg">借</button>
-                      <button type="button" class="btn btn-default btn-lg">在线试读</button>
+                      <button type="button" class="btn btn-primary btn-lg"
+                              data-toggle="modal" data-target="#myModal">借</button>
+                      <button type="button" class="btn btn-default btn-lg"
+                              data-toggle="modal" data-target="#myModal">在线试读</button>
                     </div>
                     <% borrower = book[:borrow_info][:borrower]  %>
                     <%= image_tag(borrower[:avatar], class: 'img-round pull-left avatar' ) %>
@@ -135,7 +141,7 @@
                         <button type="button" class="btn btn-default btn-lg">+1</button>
                       </div>
                       <h4>
-                        猴子 等4人都想读
+                        猴子 等4人想读
                         <br>
                         <small>附近2km</small>
                       </h4>
@@ -156,7 +162,7 @@
     <div class="map">
       <div id="mapid"></div>
       <script >
-        var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+        var mymap = L.map('mapid').setView([39.978, 116.497], 13);
 
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
           maxZoom: 18,
@@ -166,8 +172,22 @@
           id: 'mapbox.streets'
         }).addTo(mymap);
 
-        var marker = L.marker([51.5, -0.09]).addTo(mymap);
+        var marker = L.marker([39.978, 116.497]).addTo(mymap);
       </script>
 
     </div>
+
+
+  <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <p>产品目前还在测试，你可以</p>
+          <button type="button" class="btn btn-primary btn-lg">申请试用</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
