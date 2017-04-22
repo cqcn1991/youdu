@@ -25,6 +25,28 @@ header{
 }
 
 .books{
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll;
+    position: fixed;
+    width: 60%;
+    z-index: 0;
+}
+
+.map{
+    top: 80px;
+    z-index: 0;
+    display: block;
+    width: 40%;
+    bottom: 0;
+    left: auto;
+    position: fixed;
+    right: 0;
+    #mapid { height: 100%; }
+}
+
+.books{
   padding-left: 15px;
   padding-right: 15px;
 
@@ -56,8 +78,13 @@ header{
     height: 64px;
     width: 64px;
     margin-right: 20px;
+    &.requester{
+      &:first-of-type{
+        margin-left: 0;
+      }
+      margin-left: -45px;
+    }
   }
 }
 
-#mapid { height: 800px; }
 
