@@ -12,29 +12,15 @@
       id: 'mapbox.streets'
     }).addTo(mymap);
 
-    var marker = L.marker([lat, long]).addTo(mymap);
-
-    var LeafIcon = L.Icon.extend({
-      options: {
-        shadowUrl: '<%= asset_path('leaf-shadow.png') %>',
-        iconSize:     [38, 95],
-        shadowSize:   [50, 64],
-        iconAnchor:   [22, 94],
-        shadowAnchor: [4, 62],
-        popupAnchor:  [-3, -76]
-      }
-    });
-
     var myIcon = L.divIcon({
-      className: 'my-div-icon',
-      html: 'Test'
+      className: 'map-icon',
+      html: '<div class="book-num">5</div>'+
+      '<h6>A Man in All Markets</h6>'
     });
 
-//    var greenIcon = new LeafIcon({iconUrl: '<%= asset_path('leaf-green.png') %>'}),
-//        redIcon = new LeafIcon({iconUrl: '<%= asset_path('leaf-red.png') %>'}),
-//        orangeIcon = new LeafIcon({iconUrl: '<%= asset_path('leaf-orange.png') %>'});
-
-    L.marker([51.5, -0.09], {icon: myIcon}).bindPopup("I am a green leaf.").addTo(mymap);
     L.marker([51.495, -0.083], {icon: myIcon}).bindPopup("I am a red leaf.").addTo(mymap );
     L.marker([51.49, -0.1], {icon: myIcon}).bindPopup("I am an orange leaf.").addTo(mymap);
+
+    var marker = L.marker([lat, long]).addTo(mymap);
+
   </script>

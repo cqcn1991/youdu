@@ -1,20 +1,16 @@
-
-
 <nav class="navbar navbar-default">
-
   <div class="container-fluid">
     <div class="navbar-header">
       <h2>
         <span class="first">豆瓣</span><span class="second">友</span><span class="third">读</span>
+        <small>目前仅支持北京酒仙桥地区</small>
       </h2>
     </div>
-
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#">About</a></li>
     </ul>
   </div>
 </nav>
-
 
 <div >
     <div class="books">
@@ -29,7 +25,9 @@
             <h3 class="book-title">A Man for All Markets</h3>
             <div class="rating-info">
               <span class="rating">8.8 </span>
-              <span class="rating-right text-info">★★★★★ <small>19人评价</small></span>
+              <span class="rating-right text-info">
+                <span class="star9 star-img"> </span>
+                <small>19人评价</small></span>
             </div>
             <div class="category">
               投资 / 金融 / 传记
@@ -82,89 +80,13 @@
 
 
       </div>
-
       <% @books.each do |book|  %>
-          <div class="book ">
-            <div class="row">
-              <div class="book-cover col-md-3">
-                <a >
-                  <%= image_tag(book[:cover], class:"img-responsive" ) %>
-                </a>
-              </div>
-              <div class="book-info col-md-9">
-                <h3 class="book-title"><%= book[:title] %></h3>
-                <div class="rating-info">
-                  <span class="rating"><%= book[:rating] %> </span>
-                  <span class="rating-right text-info">★★★★★
-                    <small><%= book[:ratings_num] %>人评价</small></span>
-                </div>
-                <div class="category">
-                  <%= book[:category] %>
-                  <!--投资 / 金融 / 传记-->
-                </div>
-
-                <% book[:reviews].each do |review| %>
-                    <div class="review">
-                        <span class="user">
-                          <a href=""><%= review[:user] %></a>:
-                          <%= review[:content] %>
-                        </span>
-                        <span class="likes pull-right">
-                          <small>
-                            <a href=""><%= fa_icon "thumbs-o-up" %></a> <%= review[:likes] %>
-                          </small>
-                        </span>
-                    </div>
-                <% end %>
-                <div class="borrow-info">
-                  <% if book[:borrow_info][:avaiable]  %>
-                    <% borrower = book[:borrow_info][:borrower]  %>
-                    <%= image_tag(borrower[:avatar], class: 'img-round pull-left avatar' ) %>
-                    <h4 class="pull-left">
-                      <%= borrower[:user_name] %> 有这本书
-                      <br>
-                      <small>附近<%= borrower[:distance] %>m, <%= borrower[:record_num] %>人借过</small>
-                    </h4>
-                    <div class="btn-group pull-right borrow-button" >
-                      <button type="button" class="btn btn-primary btn-lg"
-                              data-toggle="modal" data-target="#myModal">借</button>
-                      <button type="button" class="btn btn-default btn-lg"
-                              data-toggle="modal" data-target="#myModal">在线试读</button>
-                    </div>
-                  <% else  %>
-                      <img src="https://z2.muscache.com/im/pictures/6b67c96e-02be-4c2d-965d-11ccb8b74873.jpg?aki_policy=profile_x_medium"
-                           class="img-round pull-left avatar requester"
-                           data-reactid="118" height="64" width="64">
-                      <img src="https://z2.muscache.com/im/pictures/ad421b88-89a4-46be-99ba-22c5f60a3f84.jpg?aki_policy=profile_x_medium"
-                           class="img-round pull-left avatar requester"
-                           data-reactid="118" height="64" width="64">
-                      <img src="https://z1.muscache.com/im/users/39563133/profile_pic/1437891275/original.jpg?aki_policy=profile_x_medium"
-                           class="img-round pull-left avatar requester"
-                           data-reactid="118" height="64" width="64">
-                      <h4 class="pull-left">
-                        猴子 等4人想读
-                        <br>
-                        <small>附近2km</small>
-                      </h4>
-                      <div class="btn-group pull-right borrow-button" >
-                        <button type="button" class="btn btn-success btn-lg">我有</button>
-                        <button type="button" class="btn btn-default btn-lg">+1</button>
-                      </div>
-
-
-                  <% end  %>
-                </div>
-              </div>
-            </div>
-
-
-
-          </div>
-
-    <% end  %>
+          <%= render(partial: 'book', locals:{book: book}) %>
+      <% end  %>
     </div>
     <div class="map">
       <%= render('map') %>
     </div>
+
     <%= render('borrow_modal') %>
 </div>

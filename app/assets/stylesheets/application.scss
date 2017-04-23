@@ -22,9 +22,10 @@
   h2{
     margin-bottom: 15px;
     margin-top: 15px;
-    .first{color: rgb(43,149,59);  }
+    .first{color: rgb(43,149,59);}
     .second{color: rgb(37,151,205)}
     .third{color: rgb(246,198,142)}
+    small{font-size: 40%;}
   }
   margin-bottom: 0;
   .navbar-nav > li > a {
@@ -112,6 +113,64 @@
   }
   .send-message{
     background-color: rgb(250, 251,253);
+    .form-group{
+      float: left;
+      width: 85%;
+      .form-control{
+        width: 100%;
+      }
+    }
   }
 }
 
+.map-icon{
+  width: 40px;
+  .book-num{
+    border: 2px solid #fff;
+    background-color: rgb(43,149,59);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    line-height: 33px;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+.star-img{
+  background: rgba(0, 0, 0, 0) url('rating.png') no-repeat scroll 0 0;
+  display: inline-block;
+  height: 15px;
+  overflow: hidden;
+  width: 75px;
+}
+.star10 {
+  background-position: 0 0;
+}
+.star9 {
+  background-position: 0 -15px;
+}
+.star8 {
+  background-position: 0 -30px;
+}
+.star7 {
+  background-position: 0 -45px;
+}
+.star6 {
+  background-position: 0 -60px;
+}
+.star5 {
+  background-position: 0 -75px;
+}
+.star4 {
+  background-position: 0 -90px;
+}
+.star3 {
+  background-position: 0 -115px;
+}
+.star2 {
+  background-position: 0 -130px;
+}
+.star1 {
+  background-position: 0 -145px;
+}
