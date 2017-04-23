@@ -44,19 +44,14 @@
                       data-toggle="modal" data-target="#myModal">在线试读</button>
             </div>
         <% else  %>
-            <img src="https://z2.muscache.com/im/pictures/6b67c96e-02be-4c2d-965d-11ccb8b74873.jpg?aki_policy=profile_x_medium"
-                 class="img-round pull-left avatar requester"
-                 data-reactid="118" height="64" width="64">
-            <img src="https://z2.muscache.com/im/pictures/ad421b88-89a4-46be-99ba-22c5f60a3f84.jpg?aki_policy=profile_x_medium"
-                 class="img-round pull-left avatar requester"
-                 data-reactid="118" height="64" width="64">
-            <img src="https://z1.muscache.com/im/users/39563133/profile_pic/1437891275/original.jpg?aki_policy=profile_x_medium"
-                 class="img-round pull-left avatar requester"
-                 data-reactid="118" height="64" width="64">
+            <% wishers = book[:borrow_info][:wishers]  %>
+            <% wishers.each do |wisher| %>
+                <%= image_tag(wisher[:avatar], class: 'img-round pull-left avatar wisher' ) %>
+            <% end  %>
             <h4 class="pull-left">
-              猴子 等4人想读
+              <%= wishers.first[:user_name] %> 等<%= wishers.count %>人想读
               <br>
-              <small>附近2km</small>
+              <small>附近 <%= wishers.first[:distance]  %>m</small>
             </h4>
             <div class="btn-group pull-right borrow-button" >
               <button type="button" class="btn btn-success btn-lg">我有</button>

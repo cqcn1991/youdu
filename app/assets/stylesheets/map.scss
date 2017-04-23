@@ -1,0 +1,20 @@
+
+.map-icon{
+  text-align: center;
+  .book-num{
+    display: inline-block;
+    border: 2px solid #fff;
+    background-color: rgb(43,149,59);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    line-height: 33px;
+    color: #fff;
+  }
+  .item-info{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: -33px;
+    width: 100px;
+  }
+}

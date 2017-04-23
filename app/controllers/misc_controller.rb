@@ -60,9 +60,70 @@ class MiscController < ApplicationController
               },
           ],
           borrow_info: {avaiable: false,
-                   borrower: {user_name: 'Xipan', record_num: 13, distance: 600, avatar:
-                       'https://z2.muscache.com/im/pictures/648a5fda-cfe4-4291-8ad3-8255edd6bd24.jpg?aki_policy=profile_x_medium'
-                   }
+            wishers: [
+              {user_name: '猴子', user_link: '', distance: 500, avatar:
+                  'https://z2.muscache.com/im/pictures/6b67c96e-02be-4c2d-965d-11ccb8b74873.jpg?aki_policy=profile_x_medium'
+              },
+              {user_name: '', user_link: '', avatar:
+                  'https://z2.muscache.com/im/pictures/ad421b88-89a4-46be-99ba-22c5f60a3f84.jpg?aki_policy=profile_x_medium'
+              },
+              {user_name: '', user_link: '', avatar:
+                  'https://z1.muscache.com/im/users/39563133/profile_pic/1437891275/original.jpg?aki_policy=profile_x_medium'
+              },
+            ],
+          }
+        },
+        { title:'怎样鉴别黄色歌曲',
+          cover: 'https://img3.doubanio.com/lpic/s4413863.jpg',
+          rating: 8.5,
+          ratings_num: 3119,
+          category: '音乐 / 中国 / 历史',
+          reviews: [
+              {user: '九姨太鄭爽醬', likes: 48, user_link: 'https://www.douban.com/people/zhengshuang/', content:
+                  '全靠这本书 我戒除了手淫 感谢'
+              },
+              {user: '她还没有死', likes: 72, user_link: 'https://www.douban.com/people/deathnroll/', content:
+                  '想当年我们乐队就是被这本书弄垮的 讨厌哦'
+              },
+              {user: 'Lebenswelt', likes: 24, user_link: 'https://www.douban.com/people/mujun_soc/', content:
+                  '“许多表现妇女失恋或被遗弃时哀怨悲苦情调的黄色歌曲，它们并不是出于对这些被凌辱的妇女的同情，也不是为了表现她们的不幸，而是为了她们要博取廉价的怜爱的需要。”'
+              },
+          ],
+          borrow_info: {avaiable: false,
+                        wishers: [
+                            {user_name: '陈忘风', user_link: 'https://www.douban.com/people/135468115/', distance: 1500, avatar:
+                                'https://img3.doubanio.com/icon/ul135468115-1.jpg'
+                            },
+                            {user_name: '', user_link: '', avatar:
+                                'https://img3.doubanio.com/icon/ul137628428-1.jpg'
+                            },
+                        ],
+          }
+        },
+        { title:'人民的名义',
+          cover: 'https://img3.doubanio.com/lpic/s29420424.jpg',
+          link: 'https://book.douban.com/subject/26952485/',
+          rating: 7.4,
+          ratings_num: 5820,
+          category: '官场小说 / 反腐 / 政治小说',
+          reviews: [
+              {user: '木讷乡下人', likes: 18, user_link: 'https://www.douban.com/people/liuxiangyu92812/', content:
+                  '如果在扳倒前任省委书记之后戛然而止，这部小说顶多三星半，毕竟类似作品见得太多了。但作者偏偏“狗尾续貂”了几章，写了一下人民也是有他的局限性的，我反而觉得这是一部值得鼓励的作品了。很真实，很痛心——所有的人似乎都有他不足的那一面，只是好在大多数人都还有可取的地方'
+              },
+              {user: 'sleepy Mia', likes: 22, user_link: 'https://www.douban.com/people/sleepymia/', content:
+                  '奇怪，电视剧分数那么高，书反而一般。明明书比电视剧好吧，干净利落，不像电视剧那么拖沓啰嗦还加了一大堆莫名其妙的家长里短，人物塑造也算得上精准合理，比起电视剧里面脑残林华华爱哭的毛毛虫之流正常多了好嘛……'
+              },
+              {user: '欧阳杼', likes: 779, user_link: 'https://www.douban.com/people/ouyangzhu/', content:
+                  '如果制度从根子上就有问题，那么所有反腐不都是在治标吗？偏偏想让大家以为这有治本的效果。'
+              },
+              {user: '形无阻', likes: 158, user_link: 'https://www.douban.com/people/ranranaway/', content:
+                  '很久没看过国内的电视剧了，前两天看了两集人民的名义，觉得还蛮写实的（尤其是上下级相处汇报问题的微妙之处），性子急，等不到电视剧结尾，就把书先看了。中规中矩的反腐小说了。说实话这个故事在文学作品里属于一般，但在影视剧里这两年难见了，还是要推荐一下的。希望国内多出这些能反映现实社会有警示意义的电视剧。'
+              },
+          ],
+          borrow_info: {avaiable: true,
+                        borrower: {user_name: '鑫鑫鑫❤', user_link: 'https://book.douban.com/subject/offer/2843572/', record_num: 13, distance: 2000, avatar:
+                              'https://img3.doubanio.com/icon/ul36667983-5.jpg'
+                        }
           }
         }
     ]

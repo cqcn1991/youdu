@@ -18,6 +18,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.inherit-color{
+  color: inherit;
+}
+
 .navbar{
   h2{
     margin-bottom: 15px;
@@ -87,7 +91,7 @@
     height: 64px;
     width: 64px;
     margin-right: 15px;
-    &.requester{
+    &.wisher{
       &:first-of-type{
         margin-left: 0;
       }
@@ -99,49 +103,6 @@
   }
 }
 
-#testModal{
-  .modal-dialog {
-    margin: 60px auto;
-  }
-}
-
-.borrow-modal{
-  overflow:hidden;
-  .user-name{
-    background-color: rgb(250, 251,253);
-  }
-  .book-info{
-    border-bottom: 1px solid #e5e5e5;
-  }
-  .message-box{
-    height: 200px;
-    background-color: rgb(244, 246, 250);
-  }
-  .send-message{
-    background-color: rgb(250, 251,253);
-    .form-group{
-      float: left;
-      width: 85%;
-      .form-control{
-        width: 100%;
-      }
-    }
-  }
-}
-
-.map-icon{
-  width: 40px;
-  .book-num{
-    border: 2px solid #fff;
-    background-color: rgb(43,149,59);
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    line-height: 33px;
-    text-align: center;
-    color: #fff;
-  }
-}
 
 .star-img{
   background: rgba(0, 0, 0, 0) url('rating.png') no-repeat scroll 0 0;
