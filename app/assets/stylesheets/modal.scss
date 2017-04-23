@@ -7,8 +7,12 @@
 
 .borrow-modal{
   overflow:hidden;
-  .user-name{
+  .user{
     background-color: rgb(250, 251,253);
+    .avatar{
+      height: 40px;
+      width: 40px;
+    }
   }
   .book-info{
     border-bottom: 1px solid #e5e5e5;

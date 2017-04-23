@@ -1,22 +1,24 @@
+<% book=@books.first  %>
+<% user=book[:borrow_info][:borrower]  %>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
   <div class="modal-dialog " role="document">
     <div class="modal-content borrow-modal">
-      <div class="modal-header user-name">
+      <div class="modal-header user">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title text-center">
-          <img class="img-round avatar" height="40" width="40"
-               src="https://z2.muscache.com/im/pictures/a6e1f204-9e02-46cd-961a-0f6440abfbdd.jpg?aki_policy=profile_x_medium">
-          Jackie</h4>
+          <%= image_tag(user[:avatar], class: 'img-round avatar') %>
+          <span class="user-name"><%= user[:user_name] %></span>
+        </h4>
       </div>
       <div class="modal-body book-info">
         <div class="row">
           <div class="book-cover col-xs-2">
-            <img src="https://img3.doubanio.com/lpic/s29215340.jpg" alt="A Man for All Markets" class="img-responsive" >
+            <%= image_tag(book[:cover], class: "img-responsive") %>
           </div>
           <div class="col-xs-10">
             <button type="button" class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#testModal">找她借书</button>
-            <h4 class="book-title">A Man for All Markets</h4>
-            <label>地点:</label> <span>酒仙桥 500m附近</span>
+            <h4 class="book-title"><%= book[:title] %></h4>
+            <label>地点:</label> <span>酒仙桥 <%= user[:distance] %>m附近</span>
             <br>
             <label>时长:</label> <span>1 周</span>
             <br>
@@ -30,7 +32,7 @@
       <div class="modal-footer send-message">
         <form class="form-inline">
           <div class="form-group">
-            <input class="form-control" placeholder="Hi, Jackie, 这本书怎么样？">
+            <input class="form-control" placeholder="Hi, <%= user[:user_name] %>, 这本书怎么样？">
           </div>
           <button type="button" class="btn btn-default" data-toggle="modal" data-target="#testModal">发送</button>
         </form>
@@ -39,14 +41,3 @@
   </div>
 </div>
 
-<div class="modal fade" id="testModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-sm" role="document">
-    <div class="modal-content">
-      <div class="modal-body text-center">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4>产品还在内测中，你可以</h4>
-        <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">申请测试</button>
-      </div>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->

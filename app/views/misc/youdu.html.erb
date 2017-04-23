@@ -74,11 +74,14 @@
                 <br>
                 <small>25人借过</small>
               </h4>
-              <div class="btn-group pull-right borrow-button" >
-                <button type="button" class="btn btn-primary btn-lg"
-                        data-toggle="modal" data-target="#myModal">借</button>
+              <div class="btn-group pull-right action-button" >
+                <button type="button" class="btn btn-primary btn-lg btn-borrow"
+                        data-toggle="modal" data-target="#myModal"
+                        data-borrower="Ginsa" data-borrower-avatar="https://img3.doubanio.com/icon/ul4581134-5.jpg"
+                        data-book="硅谷钢铁侠" data-book-cover='https://img3.doubanio.com/lpic/s28571694.jpg'
+                        data-distance=500>借</button>
                 <a href="https://read.douban.com/reader/ebook/31842175/" target="_blank"
-                   class="btn btn-default btn-lg">在线试读</a>
+                   class="btn btn-default btn-lg btn-read">在线试读</a>
               </div>
             </div>
           </div>
@@ -96,4 +99,16 @@
     </div>
 
     <%= render('borrow_modal') %>
+    <div class="modal fade" id="testModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4>产品还在内测中，你可以</h4>
+            <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">申请测试</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 </div>
