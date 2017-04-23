@@ -75,12 +75,13 @@
   margin-top: 10px;
 }
 
+.img-round{
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
 .borrow-info{
   margin-top: 10px;
-  .img-round{
-    border: 2px solid #fff;
-    border-radius: 50%;
-  }
   .avatar{
     height: 64px;
     width: 64px;
@@ -97,4 +98,20 @@
   }
 }
 
+.borrow-modal{
+  overflow:hidden;
+  .user-name{
+    background-color: rgb(250, 251,253);
+  }
+  .book-info{
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .message-box{
+    height: 200px;
+    background-color: rgb(244, 246, 250);
+  }
+  .send-message{
+    background-color: rgb(250, 251,253);
+  }
+}
 
