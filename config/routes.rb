@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   root 'misc#youdu'
 
+  get 'qunachi', to: 'misc#qunachi'
 end

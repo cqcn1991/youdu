@@ -10,6 +10,9 @@
     height: 36px;
     line-height: 33px;
     color: #fff;
+    &.highlight{
+      background-color: black;
+    }
   }
   .item-info{
     margin-top: 5px;

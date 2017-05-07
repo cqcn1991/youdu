@@ -14,6 +14,17 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require jquery.slick
 //= require leaflet
 //= require_tree .
+
+document.addEventListener("turbolinks:load", function() {
+    $('.book').hover(function(){
+        var markerId= $(this).data('markerid');
+        console.log(markerId);
+        $('.book-num.'+markerId).toggleClass('highlight');
+    });
+
+    $('.multiple-items').slick({});
+});
 

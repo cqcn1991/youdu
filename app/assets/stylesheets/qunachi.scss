@@ -1,0 +1,40 @@
+.qunachi-container{
+  .map{
+    z-index: 0;
+    display: block;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 200px;
+    position: fixed;
+    #mapid { height: 100%; }
+  }
+
+  .restaurants{
+    background-color: grey;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: scroll;
+    position: fixed;
+    height: 200px;
+    z-index: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+  }
+}
+
+.restaurant{
+  padding-left: 8px;
+  padding-right: 8px;
+  img{ height: 120px}
+  .restaurant-rating .star{
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+  }
+}
+
+

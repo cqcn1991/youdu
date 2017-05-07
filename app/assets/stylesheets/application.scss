@@ -13,10 +13,12 @@
  *= require_tree .
  *= require leaflet
  *= require font-awesome
+ *= require slick
  *= require_self
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'slick-theme';
 
 .inherit-color{
   color: inherit;

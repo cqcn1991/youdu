@@ -13,11 +13,11 @@
     }).addTo(mymap);
 
     var bookGeoInfoArray = [
-      {number: 5, position: [51.495, -0.083], item: 'A Man in All Markets'},
-      {number: 18, position: [51.49, -0.1], item: ''},
-      {number: 20, position: [51.49, -0.11], item: ''},
-      {number: 1, position: [51.51, -0.07], item: '硅谷钢铁侠'},
-      {number: 7, position: [51.51, -0.105], item: '鞋狗 等'},
+      {number: 5, position: [51.495, -0.083], item: 'A Man in All Markets', marker_id: 'marker1'},
+      {number: 18, position: [51.49, -0.1], item: '', marker_id: 'marker2'},
+      {number: 20, position: [51.49, -0.11], item: '', marker_id: 'marker3'},
+      {number: 1, position: [51.51, -0.07], item: '硅谷钢铁侠', marker_id: 'marker4'},
+      {number: 7, position: [51.51, -0.105], item: '鞋狗 等', marker_id: 'marker5'},
     ];
 
     var arrayLength = bookGeoInfoArray.length;
@@ -25,10 +25,10 @@
       var bookGeoInfo = bookGeoInfoArray[i];
       var myIcon = L.divIcon({
         className: 'map-icon',
-        html: '<div class="book-num">'+ bookGeoInfo.number + '</div>'+
+        html: '<div class="book-num ' +  bookGeoInfo.marker_id + '">'+ bookGeoInfo.number + '</div>'+
         '<h6 class="item-info">'+bookGeoInfo.item+'</h6>'
       });
-      L.marker(bookGeoInfo.position, {icon: myIcon}).bindPopup("I am a red leaf.").addTo(mymap );
+      L.marker(bookGeoInfo.position, {icon: myIcon}).bindPopup("I am a red leaf.").addTo(mymap);
     }
 
     var marker = L.marker([lat, long]).addTo(mymap);
