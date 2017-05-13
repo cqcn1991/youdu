@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 
   root 'misc#youdu'
 
+  get "/borrow_book" => 'misc#borrow_book', as: 'borrow_book'
+
   get 'qunachi', to: 'misc#qunachi'
 end

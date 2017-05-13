@@ -75,11 +75,10 @@
                 <small>25人借过</small>
               </h4>
               <div class="btn-group pull-right action-button" >
-                <button type="button" class="btn btn-primary btn-lg btn-borrow"
-                        data-toggle="modal" data-target="#myModal"
-                        data-borrower="Ginsa" data-borrower-avatar="https://img3.doubanio.com/icon/ul4581134-5.jpg"
-                        data-book="硅谷钢铁侠" data-book-cover='https://img3.doubanio.com/lpic/s28571694.jpg'
-                        data-distance=500>借</button>
+                <!--<button type="button" class="btn btn-primary btn-lg btn-borrow"-->
+                        <!--data-toggle="modal" data-target="#myModal">借</button>-->
+                <%= link_to '借', borrow_book_path(book_id: 'test'), :remote => true,
+                            class: 'btn btn-primary btn-lg btn-borrow', 'data-toggle': 'modal', 'data-target': '#myModal' %>
                 <a href="https://read.douban.com/reader/ebook/31842175/" target="_blank"
                    class="btn btn-default btn-lg btn-read">在线试读</a>
               </div>
@@ -98,7 +97,10 @@
       <%= render('map') %>
     </div>
 
-    <%= render('borrow_modal') %>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <%= render(partial: 'borrow_modal', locals: { book: @books.first  }) %>
+  </div>
+
     <div class="modal fade" id="testModal" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">

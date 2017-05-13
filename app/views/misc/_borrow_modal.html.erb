@@ -1,43 +1,41 @@
-<% book=@books.first  %>
 <% user=book[:borrow_info][:borrower]  %>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-  <div class="modal-dialog " role="document">
-    <div class="modal-content borrow-modal">
-      <div class="modal-header user">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title text-center">
-          <%= image_tag(user[:avatar], class: 'img-round avatar') %>
-          <span class="user-name"><%= user[:user_name] %></span>
-        </h4>
-      </div>
-      <div class="modal-body book-info">
-        <div class="row">
-          <div class="book-cover col-xs-2">
-            <%= image_tag(book[:cover], class: "img-responsive") %>
-          </div>
-          <div class="col-xs-10">
-            <button type="button" class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#testModal">找她借书</button>
-            <h4 class="book-title"><%= book[:title] %></h4>
-            <label>地点:</label> <span>酒仙桥 <%= user[:distance] %>m附近</span>
-            <br>
-            <label>时长:</label> <span>1 周</span>
-            <br>
-            <label>费用:</label> <span>1 元</span>
-            <br>
-          </div>
+<div class="modal-dialog " role="document">
+  <div class="modal-content borrow-modal">
+    <div class="modal-header user">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h4 class="modal-title text-center">
+        <%= image_tag(user[:avatar], class: 'img-round avatar') %>
+        <span class="user-name"><%= user[:user_name] %></span>
+      </h4>
+    </div>
+    <div class="modal-body book-info">
+      <div class="row">
+        <div class="book-cover col-xs-2">
+          <%= image_tag(book[:cover], class: "img-responsive") %>
+        </div>
+        <div class="col-xs-10">
+          <button type="button" class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#testModal">找她借书</button>
+          <h4 class="book-title"><%= book[:title] %></h4>
+          <label>地点:</label> <span>酒仙桥 <%= user[:distance] %>m附近</span>
+          <br>
+          <label>时长:</label> <span>1 周</span>
+          <br>
+          <label>费用:</label> <span>1 元</span>
+          <br>
         </div>
       </div>
-      <div class="modal-body message-box">
-      </div>
-      <div class="modal-footer send-message">
-        <form class="form-inline">
-          <div class="form-group">
-            <input class="form-control" placeholder="Hi, <%= user[:user_name] %>, 这本书怎么样？">
-          </div>
-          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#testModal">发送</button>
-        </form>
-      </div>
+    </div>
+    <div class="modal-body message-box">
+    </div>
+    <div class="modal-footer send-message">
+      <form class="form-inline">
+        <div class="form-group">
+          <input class="form-control" placeholder="Hi, <%= user[:user_name] %>, 这本书怎么样？">
+        </div>
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#testModal">发送</button>
+      </form>
     </div>
   </div>
 </div>
+
 
