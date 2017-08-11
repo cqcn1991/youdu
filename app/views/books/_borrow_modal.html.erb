@@ -12,18 +12,22 @@
     </div>
     <div class="modal-body book-info">
       <div class="row">
-        <div class="book-cover col-xs-2">
-          <%= image_tag(book[:cover], class: "img-responsive") %>
+        <div class="book-cover col-xs-3">
+          <%= link_to book[:url], target: '_blank' do %>
+              <%= image_tag(book[:cover], class:"img-responsive" ) %>
+          <% end %>
         </div>
-        <div class="col-xs-10">
-          <button type="button" class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#testModal">找TA借书</button>
-          <h4 class="book-title"><%= book[:title] %></h4>
+        <div class="col-xs-9">
+          <h4 class="book-title"><%= link_to book[:title], book[:url], class: 'inherit-color'%></h4>
           <label>地点:</label> <span>酒仙桥 <%= user[:distance] %>m附近</span>
           <br>
           <label>时长:</label> <span>1 周</span>
           <br>
-          <label>费用:</label> <span>1 元</span>
+          <label>费用:</label> <span>1 元 (+ 保险 0.2 元)</span>
           <br>
+          <br>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#testModal">找TA借书</button>
+
         </div>
       </div>
     </div>

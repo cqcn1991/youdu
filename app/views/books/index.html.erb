@@ -1,32 +1,29 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <h2>
-        <span class="first">豆瓣</span><span class="second">友</span><span class="third">读</span>
-        <small>目前仅支持北京酒仙桥地区</small>
-      </h2>
-    </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">申请测试</a></li>
-      <li><a href="https://github.com/cqcn1991/youdu" target="_blank"><%= fa_icon 'github' %> Github</a></li>
-    </ul>
-  </div>
-</nav>
-
-<div >
+<div>
   <div class="books">
     <% @books.each do |book|  %>
-        <%= render(partial: 'book', locals:{book: book}) %>
+      <%= render(partial: 'book', locals:{book: book}) %>
     <% end  %>
+
+    <div class="pagination col-xs-12 text-center">
+      <%= link_to '下一页', '#', class: 'btn btn-default btn-lg', data: {toggle: 'modal', target: '#testModal'} %>
+    </div>
+
+    <div class="col-xs-12 footer visible-xs-block">
+      <span class="text-muted">
+        什么是豆瓣有读？
+      </span>
+      <span class="text-muted pull-right">
+        Made by <%= link_to '子珂', '#', target: '_blank' %>
+      </span>
+    </div>
   </div>
-  <div class="map">
+  <div class="map hidden-xs">
     <%= render('map') %>
   </div>
 
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
     <%= render(partial: 'borrow_modal', locals: { book: @books.first  }) %>
   </div>
-
   <div class="modal fade" id="testModal" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-sm" role="document">
       <div class="modal-content">
@@ -38,5 +35,4 @@
       </div>
     </div>
   </div>
-
 </div>

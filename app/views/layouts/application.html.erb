@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>豆瓣友读 - 找你的友邻借本书吧</title>
+    <title>豆瓣友读 - 找你的友邻借本书吧 ~</title>
     <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width,user-scalable=no">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <% if Rails.env == 'production' %>
@@ -21,6 +21,7 @@
   </head>
 
   <body>
-    <%= yield %>
+ <%= render 'layouts/header' %>
+  <%= yield %>
   </body>
 </html>

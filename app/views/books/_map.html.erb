@@ -7,7 +7,7 @@
     long =  116.490344;
     var mapObj  = new AMap.Map('mapid',{
       resizeEnable: true,
-      zoom: 15,
+      zoom: 14,
       center: [long, lat]
     });
 
@@ -29,29 +29,28 @@
     }
 
     var bookGeoInfoArray = [
-      {number: 5, position: [lat-0.005, long-0.01], item: 'A Man in All Markets', marker_id: 'marker1'},
-      {number: 3, position: [lat+0.005, long+0.01], item: '', marker_id: 'marker2'},
-      {number: 1, position: [lat+0.01, long-0.01], item: '', marker_id: 'marker3'},
-      {number: 1, position: [lat+0.01, long+0.01], item: '硅谷钢铁侠', marker_id: 'marker4'},
-      {number: 2, position: [lat+0.01, long-0.01], item: '鞋狗', marker_id: 'marker5'},
-      {number: 1, position: [lat+0.01, long-0.01], item: '鞋狗 等', marker_id: 'marker6'},
-      {number: 1, position: [lat+0.01, long-0.01], item: '', marker_id: 'marker7'},
-      {number: 1, position: [lat+0.01, long-0.01], item: '', marker_id: 'marker8'},
+        <% @books.each_with_index do |book, i| %>
+          {number: <%= Random.rand(1..5) %>, position: [lat-0.005, long-0.01], item: '<%= book[:title] %>', marker_id: '<%= book[:marker_id] %>'},
+        <% end %>
     ];
 
     var arrayLength = bookGeoInfoArray.length;
     for (var i = 0; i < arrayLength; i++) {
       var bookGeoInfo = bookGeoInfoArray[i];
       var content = document.createElement('div');
-      content.innerHTML = '<div class="book-num ' +  bookGeoInfo.marker_id + '">'+ bookGeoInfo.number + '</div>'+
+      content.innerHTML = '<div class="book-num ' +  bookGeoInfo.marker_id + '">'+
+//          '<span class="glyphicon glyphicon-book"></span>' +
+          bookGeoInfo.number +
+          '</div>'+
           '<h6 class="item-info">'+bookGeoInfo.item+'</h6>';
       content.className = 'map-icon';
 
       marker = new AMap.Marker({
         content: content,
-        position: [long+getRandomArbitrary(-0.005, 0.005) , lat+getRandomArbitrary(-0.005, 0.005)],
+        position: [long+getRandomArbitrary(-0.008, 0.008) , lat+getRandomArbitrary(-0.008, 0.008)],
 //        title: provinces[i].name,
         map: mapObj
       });
     }
   </script>
+  <span class="glyphicon glyphicon-book"></span>

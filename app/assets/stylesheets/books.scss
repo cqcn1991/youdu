@@ -6,6 +6,22 @@
   margin-top: 5px;
 }
 
+
+.books {
+  @media (max-width: 767px){
+    .book-title{
+      text-align: center;
+    }
+
+    .book-cover img{
+      max-width: 120px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+  }
+}
+
+
 .rating{
   font-size: 28px;
 }

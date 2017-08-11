@@ -24,34 +24,57 @@
   color: inherit;
 }
 
-.navbar{
-  h2{
-    margin-bottom: 15px;
-    margin-top: 15px;
-    .first{color: rgb(43,149,59);}
-    .second{color: rgb(37,151,205)}
-    .third{color: rgb(246,198,142)}
-    small{font-size: 40%;}
-  }
+.no-margin{
+  margin-top: 0;
   margin-bottom: 0;
-  .navbar-nav > li > a {
-    padding-top: 23px !important;
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+.navbar-header{
+  float: left !important;
+}
+
+.navbar-right{
+  float: right !important;
+  @media (max-width: 767px){
+    margin: 7.5px -15px 0;
   }
 }
 
+.navbar{
+  .nav-title{
+    font-size: 24px;
+    .first{color: rgb(43,149,59);}
+    .second{color: rgb(37,151,205)}
+    .third{color: rgb(246,198,142)}
+  }
+  margin-bottom: 0;
+}
+
+
 .books{
-    top: 65px;
+  @media (min-width: 767px){
+    width: 60%;
+    top: 52px;
     bottom: 0;
     left: 0;
     overflow-y: scroll;
     position: fixed;
-    width: 60%;
     z-index: 0;
     padding-top: 15px;
+  }
+  @media (max-width: 767px){
+    position: relative !important;
+    padding-top: 64px !important;
+    display: block;
+  }
 }
 
 .map{
-    top: 65px;
+    top: 52px;
     z-index: 0;
     display: block;
     width: 40%;
@@ -68,4 +91,11 @@
   .book{
     margin-bottom: 30px;
   }
+}
+
+
+.footer{
+  border-top: 1px solid #D8D8D8 ;
+  padding-top: 16px ;
+  margin-bottom: 30px;
 }

@@ -1,0 +1,16 @@
+<header class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h2 class="no-margin nav-title navbar-brand">
+        <%= link_to(root_path, class:'inherit-color ') do %>
+            <span class="first">豆瓣</span><span class="second">友</span><span class="third">读</span>
+        <% end %>
+        <small class="text-muted hidden-xs">目前仅支持北京酒仙桥地区</small>
+      </h2>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">申请测试</a></li>
+      <li class="hidden-xs"><a href="https://github.com/cqcn1991/youdu" target="_blank"><%= fa_icon 'github' %> Github</a></li>
+    </ul>
+  </div>
+</header>

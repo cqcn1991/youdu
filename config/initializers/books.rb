@@ -1,6 +1,7 @@
 module BOOKS
   ALL=[
       { title:'寻欢作乐',
+        marker_id: 'marker1',
         url: 'https://book.douban.com/subject/10768068/',
         cover: 'https://img3.doubanio.com/lpic/s26031482.jpg',
         sample_url: 'https://read.douban.com/reader/ebook/1071097/',
@@ -23,7 +24,6 @@ module BOOKS
                           'https://img3.doubanio.com/icon/ul4581134-5.jpg'
                       }
         },
-        marker_id: 'marker1',
       },
       { title:'硅谷钢铁侠',
         marker_id: 'marker6',
