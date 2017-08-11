@@ -1,0 +1,57 @@
+
+  <div id="mapid"></div>
+  <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=63e43a31483260743e7740a75896a51a"></script>
+  <script src="//webapi.amap.com/ui/1.0/main.js"></script>
+  <script type="text/javascript">
+    lat = 39.974291;
+    long =  116.490344;
+    var mapObj  = new AMap.Map('mapid',{
+      resizeEnable: true,
+      zoom: 15,
+      center: [long, lat]
+    });
+
+    marker = new AMap.Marker({
+      position: [long, lat],
+//      title: provinces[i].name,
+      map: mapObj
+    });
+
+    AMapUI.loadUI(['control/BasicControl'], function(BasicControl) {
+      //添加一个缩放控件
+      mapObj.addControl(new BasicControl.Zoom({
+        position: 'lt'
+      }));
+    });
+
+    function getRandomArbitrary(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    var bookGeoInfoArray = [
+      {number: 5, position: [lat-0.005, long-0.01], item: 'A Man in All Markets', marker_id: 'marker1'},
+      {number: 3, position: [lat+0.005, long+0.01], item: '', marker_id: 'marker2'},
+      {number: 1, position: [lat+0.01, long-0.01], item: '', marker_id: 'marker3'},
+      {number: 1, position: [lat+0.01, long+0.01], item: '硅谷钢铁侠', marker_id: 'marker4'},
+      {number: 2, position: [lat+0.01, long-0.01], item: '鞋狗', marker_id: 'marker5'},
+      {number: 1, position: [lat+0.01, long-0.01], item: '鞋狗 等', marker_id: 'marker6'},
+      {number: 1, position: [lat+0.01, long-0.01], item: '', marker_id: 'marker7'},
+      {number: 1, position: [lat+0.01, long-0.01], item: '', marker_id: 'marker8'},
+    ];
+
+    var arrayLength = bookGeoInfoArray.length;
+    for (var i = 0; i < arrayLength; i++) {
+      var bookGeoInfo = bookGeoInfoArray[i];
+      var content = document.createElement('div');
+      content.innerHTML = '<div class="book-num ' +  bookGeoInfo.marker_id + '">'+ bookGeoInfo.number + '</div>'+
+          '<h6 class="item-info">'+bookGeoInfo.item+'</h6>';
+      content.className = 'map-icon';
+
+      marker = new AMap.Marker({
+        content: content,
+        position: [long+getRandomArbitrary(-0.005, 0.005) , lat+getRandomArbitrary(-0.005, 0.005)],
+//        title: provinces[i].name,
+        map: mapObj
+      });
+    }
+  </script>

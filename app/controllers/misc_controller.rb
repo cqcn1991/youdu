@@ -15,10 +15,7 @@ class MiscController < ApplicationController
 
   end
 
-  def borrow_book
-    # @selected = Item.where(:category_id => params[:cat_id])
-    @book = BOOKS::ALL[-1]
-  end
+
 
   def qunachi
 

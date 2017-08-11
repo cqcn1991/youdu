@@ -1,10 +1,14 @@
 <div class="book" data-markerid="<%= book[:marker_id] %>">
   <div class="row">
     <div class="book-cover col-md-3">
-      <a><%= image_tag(book[:cover], class:"img-responsive" ) %></a>
+      <%= link_to book[:url], target: '_blank' do %>
+        <%= image_tag(book[:cover], class:"img-responsive" ) %>
+      <% end %>
     </div>
     <div class="book-info col-md-9">
-      <h3 class="book-title"><%= book[:title] %></h3>
+      <h3 class="book-title">
+        <%= link_to book[:title], book[:url], target: '_blank', class:'inherit-color' %>
+      </h3>
       <div class="rating-info">
         <span class="rating"><%= book[:rating] %> </span>
         <span class="rating-right text-info">
@@ -18,7 +22,7 @@
       <% book[:reviews].each do |review| %>
           <div class="review">
             <span class="user">
-              <a href=""><%= review[:user] %></a>:
+              <%= link_to(review[:user], review[:user_url], target: '_blank') %>:
               <%= review[:content] %>
             </span>
             <span class="likes pull-right">
@@ -31,22 +35,25 @@
       <div class="borrow-info">
         <% if book[:borrow_info][:avaiable]  %>
             <% borrower = book[:borrow_info][:borrower]  %>
-            <%= image_tag(borrower[:avatar], class: 'img-round pull-left avatar' ) %>
+            <%= link_to borrower[:user_url] do %>
+              <%= image_tag(borrower[:avatar], class: 'img-round pull-left avatar' ) %>
+            <% end %>
             <h4 class="pull-left">
-              <%= borrower[:user_name] %> 有这本书
+              <%= link_to borrower[:user_name], borrower[:user_url], target: '_blank', class:'inherit-color' %> 有这本书
               <br>
               <small>附近<%= borrower[:distance] %>m, <%= borrower[:record_num] %>人借过</small>
             </h4>
             <div class="btn-group pull-right borrow-button" >
-              <button type="button" class="btn btn-primary btn-lg"
-                      data-toggle="modal" data-target="#myModal">借</button>
-              <button type="button" class="btn btn-default btn-lg"
-                      data-toggle="modal" data-target="#myModal">在线试读</button>
+              <%= link_to '借', borrow_book_path(book_id: book[:url].split('/')[-1]), remote: true, class: 'btn btn-primary btn-lg',
+                          data: {toggle: 'modal', target: '#myModal'}, book_id: book[:url] %>
+              <%= link_to '在线试读', book[:sample_url], class: "btn btn-default btn-lg", target: '_blank' %>
             </div>
         <% else  %>
             <% wishers = book[:borrow_info][:wishers]  %>
             <% wishers.each do |wisher| %>
-                <%= image_tag(wisher[:avatar], class: 'img-round pull-left avatar wisher' ) %>
+                <%= link_to wisher[:user_url], target: '_blank', class: 'wisher pull-left' do %>
+                  <%= image_tag(wisher[:avatar], class: 'img-round avatar' ) %>
+                <% end %>
             <% end  %>
             <h4 class="pull-left">
               <%= wishers.first[:user_name] %> 等<%= wishers.count %>人想读
@@ -55,7 +62,7 @@
             </h4>
             <div class="btn-group pull-right borrow-button" >
               <button type="button" class="btn btn-success btn-lg">我有</button>
-              <button type="button" class="btn btn-default btn-lg">+1</button>
+              <%= link_to '想读', book[:url], class: 'btn btn-default btn-lg' %>
             </div>
         <% end  %>
       </div>

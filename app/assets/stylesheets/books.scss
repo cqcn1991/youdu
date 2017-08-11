@@ -1,0 +1,77 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.book-title{
+  margin-top: 5px;
+}
+
+.rating{
+  font-size: 28px;
+}
+
+.review{
+  margin-top: 10px;
+}
+
+.img-round{
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.borrow-info{
+  margin-top: 10px;
+  .wisher{
+    &:first-of-type{
+      margin-left: 0;
+    }
+    margin-left: -45px;
+  }
+  .avatar{
+    height: 64px;
+    width: 64px;
+    margin-right: 15px;
+  }
+  .action-button{
+    margin-top: 10px;
+  }
+}
+
+
+.star-img{
+  background: rgba(0, 0, 0, 0) asset_url('rating.png') no-repeat scroll 0 0;
+  display: inline-block;
+  height: 15px;
+  overflow: hidden;
+  width: 75px;
+}
+.star10 {
+  background-position: 0 0;
+}
+.star9 {
+  background-position: 0 -15px;
+}
+.star8 {
+  background-position: 0 -30px;
+}
+.star7 {
+  background-position: 0 -45px;
+}
+.star6 {
+  background-position: 0 -60px;
+}
+.star5 {
+  background-position: 0 -75px;
+}
+.star4 {
+  background-position: 0 -90px;
+}
+.star3 {
+  background-position: 0 -115px;
+}
+.star2 {
+  background-position: 0 -130px;
+}
+.star1 {
+  background-position: 0 -145px;
+}

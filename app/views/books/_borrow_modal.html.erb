@@ -4,8 +4,10 @@
     <div class="modal-header user">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       <h4 class="modal-title text-center">
-        <%= image_tag(user[:avatar], class: 'img-round avatar') %>
-        <span class="user-name"><%= user[:user_name] %></span>
+        <%= link_to user[:user_url], target: '_blank', class: 'avatar-wrapper' do %>
+            <%= image_tag(user[:avatar], class: 'img-round avatar') %>
+        <% end %>
+        <%= link_to user[:user_name], user[:user_url], class: 'inherit-color' %>
       </h4>
     </div>
     <div class="modal-body book-info">
@@ -14,7 +16,7 @@
           <%= image_tag(book[:cover], class: "img-responsive") %>
         </div>
         <div class="col-xs-10">
-          <button type="button" class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#testModal">找她借书</button>
+          <button type="button" class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#testModal">找TA借书</button>
           <h4 class="book-title"><%= book[:title] %></h4>
           <label>地点:</label> <span>酒仙桥 <%= user[:distance] %>m附近</span>
           <br>
