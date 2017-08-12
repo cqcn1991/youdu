@@ -26,7 +26,7 @@ module BOOKS
         },
       },
       { title:'硅谷钢铁侠',
-        marker_id: 'marker6',
+        marker_id: 'marker2',
         url: 'https://book.douban.com/subject/26759508/',
         cover: 'https://img3.doubanio.com/lpic/s28571694.jpg',
         sample_url: 'https://read.douban.com/reader/ebook/20908325/',
@@ -51,7 +51,7 @@ module BOOKS
         }
       },
       { title:'鞋狗',
-        marker_id: 'marker2',
+        marker_id: 'marker3',
         url: 'https://book.douban.com/subject/26860776/',
         cover: 'https://img3.doubanio.com/lpic/s29067926.jpg',
         sample_url: 'https://read.douban.com/reader/ebook/35010810/',
@@ -73,7 +73,7 @@ module BOOKS
         }
       },
       { title:'世界的凛冬',
-        marker_id: 'marker3',
+        marker_id: 'marker4',
         url: 'https://book.douban.com/subject/26957760/',
         cover: 'https://img1.doubanio.com/lpic/s29331058.jpg',
         sample_url: 'https://read.douban.com/reader/ebook/31842175/',
@@ -106,7 +106,7 @@ module BOOKS
         }
       },
       { title:'怎样鉴别黄色歌曲',
-        marker_id: 'marker4',
+        marker_id: 'marker5',
         url: 'https://book.douban.com/subject/1963786/',
         cover: 'https://img3.doubanio.com/lpic/s4413863.jpg',
         sample_url: 'https://read.douban.com/reader/ebook/1071097/',
@@ -135,31 +135,75 @@ module BOOKS
                       ],
         }
       },
-      { title:'人民的名义',
-        marker_id: 'marker5',
-        cover: 'https://img3.doubanio.com/lpic/s29420424.jpg',
-        url: 'https://book.douban.com/subject/26952485/',
-        sample_url: 'https://read.douban.com/reader/ebook/1071097/',
-        rating: 7.4,
-        ratings_num: 5820,
-        category: '官场小说 / 反腐 / 政治小说',
+      { title:'生活，是很好玩的',
+        marker_id: 'marker6',
+        cover: 'https://img3.doubanio.com/lpic/s29113352.jpg',
+        url: 'https://book.douban.com/subject/26899220/',
+        sample_url: 'https://read.douban.com/reader/ebook/28071845/',
+        rating: 8.9,
+        ratings_num: 689,
+        category: '散文 / 随笔 / 汪曾祺',
         reviews: [
-            {user: '木讷乡下人', likes: 18, user_url: 'https://www.douban.com/people/liuxiangyu92812/', content:
-                '如果在扳倒前任省委书记之后戛然而止，这部小说顶多三星半，毕竟类似作品见得太多了。但作者偏偏“狗尾续貂”了几章，写了一下人民也是有他的局限性的，我反而觉得这是一部值得鼓励的作品了。很真实，很痛心——所有的人似乎都有他不足的那一面，只是好在大多数人都还有可取的地方'
+            {user: 'sleepy Mia', likes: 21, user_url: 'https://www.douban.com/people/135718342/', content:
+                '选择恐惧症又总怕买错的，福音来了：读老汪散文，这一本，就够了！'
             },
-            {user: 'sleepy Mia', likes: 22, user_url: 'https://www.douban.com/people/sleepymia/', content:
-                '奇怪，电视剧分数那么高，书反而一般。明明书比电视剧好吧，干净利落，不像电视剧那么拖沓啰嗦还加了一大堆莫名其妙的家长里短，人物塑造也算得上精准合理，比起电视剧里面脑残林华华爱哭的毛毛虫之流正常多了好嘛……'
+            {user: '许桉', likes: 2, user_url: 'https://www.douban.com/people/lynnesay/', content:
+                '有趣，文采很棒。文章很有灵气，很多词都用的恰到好处。'
             },
-            {user: '欧阳杼', likes: 779, user_url: 'https://www.douban.com/people/ouyangzhu/', content:
-                '如果制度从根子上就有问题，那么所有反腐不都是在治标吗？偏偏想让大家以为这有治本的效果。'
-            },
-            {user: '形无阻', likes: 158, user_url: 'https://www.douban.com/people/ranranaway/', content:
-                '很久没看过国内的电视剧了，前两天看了两集人民的名义，觉得还蛮写实的（尤其是上下级相处汇报问题的微妙之处），性子急，等不到电视剧结尾，就把书先看了。中规中矩的反腐小说了。说实话这个故事在文学作品里属于一般，但在影视剧里这两年难见了，还是要推荐一下的。希望国内多出这些能反映现实社会有警示意义的电视剧。'
+            {user: '鐘', likes: 1, user_url: 'https://www.douban.com/people/96620215/', content:
+                '读过人间草木之后觉得汪曾祺先生是很有趣的人，写的文字很对我的胃口。这本书的食物和草木部分因为在其他书里看过大部分所以略过了，主要看故乡和西南联大的人物事。生活，确实是很好玩的。'
             },
         ],
         borrow_info: {avaiable: true,
-                      borrower: {user_name: '鑫鑫鑫❤', user_url: 'https://book.douban.com/subject/offer/2843572/', record_num: 13, distance: 2000, avatar:
-                          'https://img3.doubanio.com/icon/ul36667983-5.jpg'
+                      borrower: {user_name: '梁日青', user_url: 'https://www.douban.com/people/liangriqing', record_num: 2, distance: 6000, avatar:
+                          'https://img3.doubanio.com/icon/ul56304588-5.jpg'
+                      }
+        }
+      },
+      { title:'最好的告别',
+        marker_id: 'marker7',
+        cover: 'https://img3.doubanio.com/lpic/s28355811.jpg',
+        url: 'https://book.douban.com/subject/26576861/',
+        sample_url: 'https://read.douban.com/reader/ebook/24382585/',
+        rating: 9.0,
+        ratings_num: 9692,
+        category: '死亡 / 医学 / 社会学',
+        reviews: [
+            {user: '小乔', likes: 129, user_url: 'https://www.douban.com/people/qiaoyf/', content:
+                '现代医学常常辜负其本应帮助的人们，把生命的余日交给一点微不足道的好处，优雅的跨越生命的终点需要明白，有时候相比于健康，更重要的是幸福。推荐。'
+            },
+            {user: '木犀', likes: 50, user_url: 'https://www.douban.com/people/muxieyes/', content:
+                '因为疾病或衰老而可能走向生命终点时，我们将如何选择前面的道路。是付出痛苦的代价依赖技术试图延长生命，还是承认生命的有限而专注当下的生活，或者寻求加速死亡的进程。我们的敌人往往不是死亡，而是我们对死亡的无准备和回避、对医学局限性的不了解和不正视。'
+            },
+            {user: '山阴路的房东', likes: 77, user_url: 'https://www.douban.com/people/lylrz/', content:
+                '湛卢文化非常擅长做这种社科类的畅销书，看评论都说好，为什么我偏偏看不进去。'
+            },
+        ],
+        borrow_info: {avaiable: true,
+                      borrower: {user_name: '慕月薇涵', user_url: 'https://www.douban.com/people/iamspringday/', record_num: 3, distance: 4000, avatar:
+                          'https://img3.doubanio.com/icon/ul45156547-6.jpg'
+                      }
+        }
+      },
+      { title:'人类简史',
+        marker_id: 'marker8',
+        cover: 'https://img3.doubanio.com/lpic/s27814883.jpg',
+        url: 'https://book.douban.com/subject/25985021',
+        sample_url: 'https://read.douban.com/reader/ebook/10570957/',
+        rating: 9.2,
+        ratings_num: 34193,
+        category: '历史 / 人类学',
+        reviews: [
+            {user: '阿折', likes: 329, user_url: 'https://www.douban.com/people/2224375/', content:
+                '此书打分这么高，就是怪咖了下人类历史，显得新颖些批判些，其实谈的问题都不能算正确，有些连常识都没有。'
+            },
+            {user: 'danyboy', likes: 1069, user_url: 'https://www.douban.com/people/danyboy/', content:
+                '作者很年轻，博览群书，对几乎所有学科发展到当代的基本理论和观点熟谙于心，也敢说，因此，这本书并未提供任何新的和独到的观点，只是一份讲稿，.所谓“简史”并不是史学，而是他串起自己世界观的线索。但他提供了一套完整的“当代人”的价值体系，而且政治正确，内容丰富，语言生动，一个年轻人如果知识比较零碎，读这本书再适合不过了。'
+            },
+        ],
+        borrow_info: {avaiable: true,
+                      borrower: {user_name: '刺客K', user_url: 'https://www.douban.com/people/kathreenbt/', record_num: 5, distance: 5000, avatar:
+                          'https://img3.doubanio.com/icon/ul2890114-54.jpg'
                       }
         }
       }

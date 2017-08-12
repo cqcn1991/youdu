@@ -6,13 +6,15 @@
   margin-top: 5px;
 }
 
+.action-button{
+  margin-left: 10px;
+}
 
 .books {
   @media (max-width: 767px){
     .book-title{
       text-align: center;
     }
-
     .book-cover img{
       max-width: 120px;
       display: block;

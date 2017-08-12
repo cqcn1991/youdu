@@ -25,7 +25,7 @@
           </span>
           <span class="likes pull-right">
             <small>
-              <a href=""><%= fa_icon "thumbs-o-up" %></a> <%= review[:likes] %>
+              <%= fa_icon "thumbs-o-up" %> <%= review[:likes] %>
             </small>
           </span>
         </div>
@@ -57,7 +57,7 @@
                 <% end %>
             <% end  %>
             <h4 class="pull-left">
-              <%= wishers.first[:user_name] %> 等<%= wishers.count %>人想读
+              <%= link_to wishers.first[:user_name], wishers.first[:user_url], target: '_blank', class:'inherit-color' %> 等<%= wishers.count %>人想读
               <br>
               <small>附近 <%= wishers.first[:distance]  %>m</small>
             </h4>

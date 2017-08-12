@@ -32,6 +32,17 @@
 .inline-block{
   display: inline-block;
 }
+.col-xl-6{
+  @media (min-width: 1800px){
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 50%;
+  }
+}
+
 
 .navbar-header{
   float: left !important;
