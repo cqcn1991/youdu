@@ -1,24 +1,36 @@
-# README
+豆瓣友读
+-------
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![](./public/screenshot.png)
 
-Things you may want to cover:
+## 什么是豆瓣友读？
 
-* Ruby version
+有时，我会注意到
 
-* System dependencies
+- 身边有朋友有不少书，不过是放在书架上。可是，在书架上放着也是放着，为什么不借给其他需要的朋友看?
+- 虽然我自己几年没有买过纸质书, 大多都是在平板上看，但观察身边的同学，发现还是有不少人在看纸质书
 
-* Configuration
+所以，有没有可能把自己的书，借给其他人看，一方面方便其他人读书（而不需要直接购买），另一方面，自己也收点零用？
 
-* Database creation
+所以，就有了豆瓣友读。
 
-* Database initialization
+当然，这只是一个简单的想法，实际做起来会有很多问题，比如
 
-* How to run the test suite
+- 市场存在吗？真的有人愿意去借别人的书来看吗？现在大家还看书吗？
+- 真的有人愿意把自己喜欢的书借给别人，只是为了一丁点钱吗？把书搞坏了怎么办？
 
-* Services (job queues, cache servers, search engines, etc.)
+这都需要具体做试验去验证的，更具体的介绍，可见[]()
 
-* Deployment instructions
+## 代码说明
 
-* ...
+这里没啥实质性代码，因为本身就是个demo，主要是想知道有没有感兴趣的朋友，工程师、设计师都可以。
+
+一起做感兴趣的事情，会更有意思。
+
+## 最后
+
+- 请工程师同学们不要吐槽代码, 我把Ruby和JS混在一起写，自己看到都笑了. 这是我第一次写LBS+JS的东西，实在没有趁手的工具.
+- 请设计师同学们请不要吐槽流程, 这个demo有很多问题. 主要是想把vision讲清楚
+- ...作为一个PM实在是太不容易了...
+
+Made by [子珂](https://www.douban.com/people/wohaobeia/)
