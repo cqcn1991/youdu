@@ -23,6 +23,7 @@ document.addEventListener("turbolinks:load", function() {
         var markerId= $(this).data('markerid');
         console.log(markerId);
         $('.book-num.'+markerId).toggleClass('highlight');
+        $('.book-num.'+markerId).siblings('.item-info').toggleClass('highlight');
     });
 
     $('.multiple-items').slick({});

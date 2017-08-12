@@ -11,14 +11,12 @@
       center: [long, lat]
     });
 
-    marker = new AMap.Marker({
-      position: [long, lat],
-//      title: provinces[i].name,
-      map: mapObj
-    });
+//    marker = new AMap.Marker({
+//      position: [long, lat],
+//      map: mapObj
+//    });
 
     AMapUI.loadUI(['control/BasicControl'], function(BasicControl) {
-      //添加一个缩放控件
       mapObj.addControl(new BasicControl.Zoom({
         position: 'lt'
       }));
@@ -29,26 +27,30 @@
     }
 
     var bookGeoInfoArray = [
-        <% @books.each_with_index do |book, i| %>
-          {number: <%= Random.rand(1..5) %>, position: [lat-0.005, long-0.01], item: '<%= book[:title] %>', marker_id: '<%= book[:marker_id] %>'},
+      <% @books.each_with_index do |book, i| %>
+        <% if book[:borrow_info][:avaiable]  %>
+          {number: <%= i+1 %>, position: [lat-0.005, long-0.01], item: '<%= book[:title] %>',
+            book_id: '<%= book[:url].split('/')[-1] %>', marker_id: '<%= book[:marker_id] %>'},
         <% end %>
+      <% end %>
     ];
 
     var arrayLength = bookGeoInfoArray.length;
     for (var i = 0; i < arrayLength; i++) {
       var bookGeoInfo = bookGeoInfoArray[i];
       var content = document.createElement('div');
-      content.innerHTML = '<div class="book-num ' +  bookGeoInfo.marker_id + '">'+
-//          '<span class="glyphicon glyphicon-book"></span>' +
-          bookGeoInfo.number +
+      content.innerHTML =
+        '<a class="book-marker" data-remote="true" data-toggle="modal" data-target="#myModal" href="/borrow_book?book_id='+ bookGeoInfo.book_id+'">' +
+          '<div class="book-num ' +  bookGeoInfo.marker_id + '">'+
+            bookGeoInfo.number +
           '</div>'+
-          '<h6 class="item-info">'+bookGeoInfo.item+'</h6>';
+          '<div class="item-info">'+bookGeoInfo.item+'</div>' +
+          '</a>';
       content.className = 'map-icon';
 
       marker = new AMap.Marker({
         content: content,
-        position: [long+getRandomArbitrary(-0.008, 0.008) , lat+getRandomArbitrary(-0.008, 0.008)],
-//        title: provinces[i].name,
+        position: [long+getRandomArbitrary(-0.015, 0.015) , lat+getRandomArbitrary(-0.015, 0.015)],
         map: mapObj
       });
     }

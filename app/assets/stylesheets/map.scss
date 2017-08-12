@@ -1,24 +1,38 @@
 
 .map-icon{
-  text-align: center;
   .book-num{
-    display: inline-block;
-    border: 2px solid #fff;
-    background-color: rgb(43,149,59);
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    line-height: 33px;
+    width: 33px;
+    height: 43px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 32px;
+    background: rgba(0, 0, 0, 0) asset_url('un_map_spot2.png') no-repeat scroll 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
     color: #fff;
     &.highlight{
-      background-color: black;
+      background-position: 0 -45px;
     }
   }
   .item-info{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    //margin-left: -33px;
-    width: 100px;
-    text-align: center;
+    &.highlight{
+      font-weight: bold;
+    }
+    white-space: nowrap;
+    display: inline-block;
+    background-color: #fff;
+    height: 29px;
+    line-height: 29px;
+    padding: 0 10px 0 14px;
+    border: 1px solid #A1A19D;
+    border-left: 0 none;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    box-shadow: 2px 2px 2px 0 #ccc;
+    position: relative;
+    z-index: -1;
+    left: 22px;
+    top: 4px;
   }
 }
