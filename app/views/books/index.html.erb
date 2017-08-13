@@ -42,7 +42,7 @@
         <div class="modal-body text-center">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <h4>产品还在内测中，你可以</h4>
-          <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">申请测试</button>
+          <%= link_to '申请测试', BOOKS::INTRO_LINK, class: 'btn btn-primary btn-lg', 'data-dismis': "modal", target: '_blank' %>
         </div>
       </div>
     </div>

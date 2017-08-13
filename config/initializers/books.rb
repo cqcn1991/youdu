@@ -1,4 +1,6 @@
 module BOOKS
+  INTRO_LINK = 'https://www.douban.com/note/632974357/'
+
   ALL=[
       { title:'寻欢作乐',
         marker_id: 'marker1',
